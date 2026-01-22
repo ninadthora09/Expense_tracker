@@ -1,17 +1,21 @@
-import { useEffect } from "react";
 import axios from "axios";
 
-function App() {
-  const API = import.meta.env.VITE_API_URL;
+const API = import.meta.env.VITE_API_URL;
 
-  useEffect(() => {
-    axios
-      .get(`${API}/api/health`)
-      .then(res => console.log(res.data))
-      .catch(err => console.error(err));
-  }, []);
+// ✅ Get all expenses
+export const getAllExpenses = async () => {
+  const res = await axios.get(`${API}/api/expenses`);
+  return res.data;
+};
 
-  return <h1>Frontend Connected</h1>;
-}
+// ✅ Add a new expense
+export const addExpense = async (expense) => {
+  const res = await axios.post(`${API}/api/expenses`, expense);
+  return res.data;
+};
 
-export default App;
+// ✅ Delete an expense
+export const deleteExpense = async (id) => {
+  const res = await axios.delete(`${API}/api/expenses/${id}`);
+  return res.data;
+};
