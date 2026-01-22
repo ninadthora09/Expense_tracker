@@ -12,7 +12,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://expense-tracker-liart-two-47.vercel.app"
+      /\.vercel\.app$/ 
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
