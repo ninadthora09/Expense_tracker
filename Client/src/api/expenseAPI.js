@@ -1,17 +1,17 @@
+import { useEffect } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/expenses"; // adjust if needed
+function App() {
+  const API = import.meta.env.VITE_API_URL;
 
-export const getAllExpenses = async () => {
-  const res = await axios.get(API_URL);
-  return res.data;
-};
+  useEffect(() => {
+    axios
+      .get(`${API}/api/health`)
+      .then(res => console.log(res.data))
+      .catch(err => console.error(err));
+  }, []);
 
-export const addExpense = async (expense) => {
-  const res = await axios.post(API_URL, expense);
-  return res.data;
-};
+  return <h1>Frontend Connected</h1>;
+}
 
-export const deleteExpense = async (id) => {
-  await axios.delete(`${API_URL}/${id}`);
-};
+export default App;
