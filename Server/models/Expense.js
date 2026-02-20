@@ -7,7 +7,7 @@ const expenseSchema = new mongoose.Schema({
   },
   category: {
     type: String,
-    enum: ["Half Tiffin", "Full Tiffin"],
+    enum: ["Half", "Full"],
     required: true,
   },
   amount: {
