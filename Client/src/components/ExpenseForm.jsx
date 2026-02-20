@@ -8,7 +8,7 @@ export default function ExpenseForm({ onAddExpense }) {
     date: "",
   });
 
-  // ✅ Automatically set today's date
+  //  Automatically set today's date
   useEffect(() => {
     const today = new Date().toISOString().split("T")[0];
     setFormData((prev) => ({ ...prev, date: today }));
@@ -39,7 +39,7 @@ export default function ExpenseForm({ onAddExpense }) {
       className="space-y-5 bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-indigo-100"
     >
       <h2 className="text-2xl font-bold text-center bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-4">
-        🍱 Add Tiffin Record
+        🍱 Add Expense Record
       </h2>
 
       {/* Select Person */}
@@ -52,8 +52,8 @@ export default function ExpenseForm({ onAddExpense }) {
           className="w-full bg-white border border-gray-300 rounded-xl px-4 py-2.5 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200"
         >
           <option value="">Choose...</option>
-          <option value="Ninad">👨 Ninad</option>
-          <option value="Other">👤 Om</option>
+          <option value="Ninad">👨 Person1</option>
+          <option value="Other">👤 Person2</option>
         </select>
       </div>
 
@@ -67,8 +67,8 @@ export default function ExpenseForm({ onAddExpense }) {
           className="w-full bg-white border border-gray-300 rounded-xl px-4 py-2.5 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200"
         >
           <option value="">Choose...</option>
-          <option value="Half Tiffin">🥪 Half Tiffin (₹40)</option>
-          <option value="Full Tiffin">🍛 Full Tiffin (₹70)</option>
+          <option value="Half Tiffin">🥪 Half  (₹40)</option>
+          <option value="Full Tiffin">🍛 Full (₹70)</option>
         </select>
       </div>
 

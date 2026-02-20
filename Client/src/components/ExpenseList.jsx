@@ -26,7 +26,7 @@ export default function ExpenseList({ expenses, onDeleteExpense }) {
 
       {sortedDates.length === 0 ? (
         <p className="text-gray-500 text-center py-6 italic">
-          No tiffin records yet 🍽️
+          No records yet 🍽️
         </p>
       ) : (
         <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">

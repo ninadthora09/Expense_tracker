@@ -35,18 +35,18 @@ export default function Dashboard() {
         {/* ---------- LEFT SIDE ---------- */}
         <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300">
           <h1 className="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-transparent bg-clip-text">
-            💼 Expense Tracker
+            💼 Order List
           </h1>
 
-          {/* ✅ Total Balance Section */}
+          {/*  Total Balance Section */}
           <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-4 mb-6 shadow-inner">
             <TotalBalance expenses={expenses} />
           </div>
 
-          {/* ✅ Divider */}
+          {/*  Divider */}
           <div className="my-6 border-t border-gray-200"></div>
 
-          {/* ✅ Expense Form */}
+          {/*  Expense Form */}
           <div className="p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300">
             <ExpenseForm onAddExpense={handleAddExpense} />
           </div>
